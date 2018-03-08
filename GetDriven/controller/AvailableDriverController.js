@@ -21,7 +21,7 @@ export function CheckState(item,Drivers) {
      * If it is true it means that the Driver is selected for the Ride. else he is not
      * It will go through each Driver in the Array and checks it's Checker property.
      * If it's true it will add it to the Counter and in the end it returns the counter
-     * @param {Array[Driver]} Drivers 
+     * @param {Array[]} Drivers 
      */
 export function CheckLength(Drivers)
 {
@@ -37,11 +37,11 @@ export function CheckLength(Drivers)
 }
 /**
  * 
- * @param {Array[Driver]} Drivers - "The Drivers"
+ * @param {Array[]} Drivers - "The Drivers"
  * @param {String} rideID - "The ID of the Ride"
  * @param {Object} Navigation - "The Navigation Object. This is just being passed so it can navigate back to the HomeMenu.
      * it is from an external module : https://www.npmjs.com/package/react-navigation"
-     * @param {Meteor User Object} User - "The User. Needs to be passed with the navigation. Otherwise the HomeMenu cannot
+     * @param {Object} User - "The User. Needs to be passed with the navigation. Otherwise the HomeMenu cannot
      * find the Meteor user after the Accounts.createUser call"
  */
 export function SaveForCustomer(Drivers,rideID,Navigation)

@@ -25,7 +25,7 @@ import { checkString, checkEmail, checkNumber, checkPassword,checkDate, checkBan
      * @param {Date} x_Birth_Date - "The Birth Date of the Driver"
      * @param {Object} Navigation - "The Navigation Object. This is just being passed so it can be used in a later function.
      * it is from an external module : https://www.npmjs.com/package/react-navigation"
-     * @param {Meteor User Object} User - "The User. Needs to be passed with the navigation. Otherwise the HomeMenu cannot
+     * @param {Object} User - "The User. Needs to be passed with the navigation. Otherwise the HomeMenu cannot
      * find the Meteor user after the Accounts.createUser call"
      */
 export function CheckValidDriver(x_Name,x_First_Name,x_Email,x_Phone_Number,x_Street,x_Nr,x_Postal_Code,x_City
@@ -126,7 +126,7 @@ export function CheckValidDriver(x_Name,x_First_Name,x_Email,x_Phone_Number,x_St
      * @param {Date} x_Birth_Date - "The Birth Date of the Driver"
      * @param {Object} Navigation - "The Navigation Object. This is just being passed so it can navigate back to the HomeMenu.
      * it is from an external module : https://www.npmjs.com/package/react-navigation"
-     * @param {Meteor User Object} User - "The User. Needs to be passed with the navigation. Otherwise the HomeMenu cannot
+     * @param {Object} User - "The User. Needs to be passed with the navigation. Otherwise the HomeMenu cannot
      * find the Meteor user after the Accounts.createUser call"
      */
 function CreateDriver(x_Name,x_First_Name,x_Email,x_Phone_Number,x_Street,x_Nr,x_Postal_Code,x_City
@@ -153,7 +153,6 @@ function CreateDriver(x_Name,x_First_Name,x_Email,x_Phone_Number,x_Street,x_Nr,x
         }
         else
         {
-            console.log(User);
             Navigation.navigate('HomeMenu',{User});
         }
       });

@@ -18,7 +18,7 @@ export default class LoginScreen extends React.Component {
     });
     constructor(props) {
         super(props);
-         /* For admin -> cntrl + : to uncomment*/ this.state = { Email: "info@getdriven.be", Password: "GetDriven123!"};
+         /* For admin -> cntrl + : to uncomment*/ this.state = { Email: "", Password: ""};
         // /* For admin -> cntrl + : to uncomment*/ this.state = { Email: "info@getdriven.be", Password: "GetDriven123!"};
         // /* For driver -> cntrl + : to uncomment*/this.state = { Email: "driver@test.be", Password: "abc&1"};
         ///* demo shit */ this.state = { Email: "", Password: ""};

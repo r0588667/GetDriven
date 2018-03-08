@@ -29,7 +29,7 @@ import { checkString, checkEmail, checkNumber, checkPassword,checkDate, checkDat
      * @param {String} x_End_Time - "The Time the ride ends"
      * @param {Object} Navigation - "The Navigation Object. This is just being passed so it can be used in a later function.
      * it is from an external module : https://www.npmjs.com/package/react-navigation"
-     * @param {Meteor User Object} User - "The User. Needs to be passed with the navigation. Otherwise the HomeMenu cannot
+     * @param {Object} User - "The User. Needs to be passed with the navigation. Otherwise the HomeMenu cannot
      * find the Meteor user after the Meteor call"
      */
 export function CheckValidRide(x_Departure_Date,x_Street,x_Nr,x_Postal_Code,x_City
@@ -121,7 +121,7 @@ export function CheckValidRide(x_Departure_Date,x_Street,x_Nr,x_Postal_Code,x_Ci
      * @param {String} x_End_Time - "The Time the ride ends"
      * @param {Object} Navigation - "The Navigation Object. This is just being passed so it can navigate back to the HomeMenu.
      * it is from an external module : https://www.npmjs.com/package/react-navigation"
-     * @param {Meteor User Object} User - "The User. Needs to be passed with the navigation. Otherwise the HomeMenu cannot
+     * @param {Object} User - "The User. Needs to be passed with the navigation. Otherwise the HomeMenu cannot
      * find the Meteor user after the Meteor call"
      */
     function CreateRide(x_Departure_Date,x_Street,x_Nr,x_Postal_Code,x_City
