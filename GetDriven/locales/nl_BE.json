@@ -1,0 +1,77 @@
+{
+  "CustomerRegistration": {
+    "Name": "Naam",
+    "First_Name": "Voornaam",
+    "Street": "Straat",
+    "Nr" : "Nr",
+    "Postal_Code" : "Post Code",
+    "City" : "Gemeente ",
+    "Email" : "Email",
+    "Phone_Number" : "Telefoonnummer",
+    "Password" :"Password",
+    "LengthCheck" : "Het Passwoord moet minstens 5 characters lang zijn",
+    "CharCheck" : "Het Passwoord moet minstens 1 speciaal karakter hebben",
+    "Show_Password_Hints" : "Duw Om Passwoord Hints Te Tonen",
+    "NumCheck" : "Het Passwoord moet minstens 1 getal hebben"
+  },
+  "LoginScreen": {
+    "Email": "Email",
+    "Password": "Passwoord",
+    "Login" : "Inloggen",
+    "Register" : "Registreer",
+    "InvalidLogin" : "Ongeldige Login"
+  },
+  "DriverRegistration" : 
+  {
+    "Name": "Naam",
+    "First_Name": "Voornaam",
+    "Street": "Straat",
+    "Nr" : "Nr",
+    "Postal_Code" : "Post Code",
+    "City" : "Gemeente ",
+    "Email" : "Email",
+    "Phone_Number" : "Telefoonnummer",
+    "Birth_Date" : "Geboortedatul",
+    "SocialSec_Number" : "Rijksregisternummer",
+    "Account_Number" : "Rekeningnummer",
+    "DateConfirm" : "Bevestig",
+    "DateCancel" : "Annuleer",
+    "Password" :"Password",
+    "LengthCheck" : "Het Passwoord moet minstens 5 characters lang zijn",
+    "CharCheck" : "Het Passwoord moet minstens 1 speciaal karakter hebben",
+    "NumCheck" : "Het Passwoord moet minstens 1 getal hebben",
+    "Show_Optional" : "Duw Om Optionele Velden Te Tonen",
+    "Show_Password_Hints" : "Duw Om Passwoord Hints Te Tonen",
+    "Company_Name" : "Bedrijfsnaam",
+    "BTW_Nr" : "BTW Nr"
+    },
+    "RideRegistration" :
+    {
+      "Departure_Adres" : "Vertrek Adres",
+      "Destination_Adres" : "Aankomst Adres",
+      "Street": "Straat",
+      "Nr" : "Nr",
+      "Postal_Code" : "Post Code",
+      "City" : "Gemeente ",
+      "Departure_Date" : "Vertrek Date",
+      "Time" : "Tijd",
+      "Single" : "Enkel",
+      "Return" : "Retour",
+      "ChooseCategory" : "Tik om een soort trip te kiezen : ",
+      "Extra_Message" : "Extra Bericht",
+      "PickUp" : "PickUp",
+      "Destination" : "Destination",
+      "Show_Optional" : "Show Optional Fields",
+      "TypeOfCar" : "Type Of Car",
+      "End_Date" : "Verwachte Eind Datum",
+      "End_Time" : "Verwachte Eind Tijd",
+      "Submit" : "Voeg Toe"
+    },
+    "HomeMenu" :
+    {
+    "MyRides" : "Mijn Ritten",
+    "AvailableRides" : "Vrije Ritten",
+    "DriverRegistration" : "Chauffeur Registratie",
+    "CustomerRegistration" : "Klant Registratie"
+    }
+  }

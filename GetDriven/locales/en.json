@@ -1,0 +1,80 @@
+{
+    "CustomerRegistration": {
+      "Name": "Name",
+      "First_Name": "First Name",
+      "Street": "Street",
+      "Nr" : "Nr",
+      "Postal_Code" : "PC",
+      "City" : "City ",
+      "Email" : "Email",
+      "Phone_Number" : "Phone Number",
+      "Password" :"Password",
+      "LengthCheck" : "Password should have a length of at least 5 characters",
+      "CharCheck" : "Password should have at least 1 special character",
+      "NumCheck" : "Password should have at least 1 Number",
+      "Show_Optional" : "Press To Show Optional Fields",
+      "Show_Password_Hints" : "Press To Show Password Hints",
+      "Company_Name" : "Company Name",
+      "BTW_Nr" : "VAT No"
+    },
+    "LoginScreen": {
+      "Email": "Email",
+      "Password": "Password",
+      "Login" : "Login",
+      "Register" : "Register",
+      "InvalidLogin" : "Invalid Login",
+      "RememberMe" : "Remember Me"
+    },
+    "DriverRegistration" : 
+    {
+      "Name": "Name",
+      "First_Name": "First Name",
+      "Street": "Street",
+      "Nr" : "Nr",
+      "Postal_Code" : "PC",
+      "City" : "City ",
+      "Email" : "Email",
+      "Phone_Number" : "Phone Number",
+      "Birth_Date" : "Birth Date",
+      "SocialSec_Number" : "Social Security Number",
+      "Account_Number" : "Bank Account Number",
+      "DateConfirm" : "Bevestig",
+      "DateCancel" : "Annuleer",
+      "Password" :"Password",
+      "Show_Password_Hints" : "Press To Show Password Hints",
+      "LengthCheck" : "The Password should have a length of 5 characters",
+      "CharCheck" : "The Password should have at least 1 special character",
+      "NumCheck" : "The Password should have at least 1 Number"
+    },
+    "RideRegistration" :
+    {
+      "Departure_Adres" : "Departure Adres",
+      "Destination_Adres" : "Destination Adres",
+      "Street": "Street",
+      "Nr" : "Nr",
+      "Postal_Code" : "PC",
+      "City" : "City ",
+      "Departure_Date" : "Departure Date",
+      "Time" : "Time",
+      "Single" : "Single",
+      "Return" : "Return",
+      "ChooseCategory" : "Tap to choose the type of trip : ",
+      "Extra_Message" : "Extra Message",
+      "PickUp" : "PickUp",
+      "Destination" : "Destination",
+      "Show_Optional" : "Show Optional Fields",
+      "TypeOfCar" : "Type Of Car",
+      "End_Date" : "Expected End Date",
+      "End_Time" : "Expected End Time",
+      "Submit" : "Submit",
+      "Add" : "Add"
+    },
+    "HomeMenu" :
+    {
+    "MyRides" : "My Rides",
+    "AvailableRides" : "Available Rides",
+    "DriverRegistration" : "Driver Registration",
+    "ClientRegistration" : "Client Registration",
+    "RideRegistration" : "Ride registration"
+    }
+  }
