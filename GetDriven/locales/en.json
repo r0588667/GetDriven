@@ -75,6 +75,47 @@
     "AvailableRides" : "Available Rides",
     "DriverRegistration" : "Driver Registration",
     "ClientRegistration" : "Client Registration",
-    "RideRegistration" : "Ride registration"
+    "RideRegistration" : "Ride registration",
+    "Welcome" : "Welcome",
+    "Message" : "Thank you for choosing Get Driven, on the bottom left of the menu you can add a ride under 'Ride registration'. Afterwards you can travel to 'My rides' to select the drivers for that ride.",
+    "Greeting" : "Kind Regards"
+    },
+    "AvailableDrivers":
+    {
+      "Required_Drivers" : "Required Drivers",
+      "Selected_Drivers" : "Selected Drivers",
+      "Save_Changes" : "Save Changes"
+    },
+    "AvailableRides" :
+    {
+      "Save_Changes" : "Save Changes",
+      "Km_Away" : "Km Away"
+    },
+    "MyRides" :
+    {
+      "Drivers" : "Drivers",
+      "CustomerRides" : "My Rides as a Customer",
+      "DriverRides" : "My Rides as a Driver"
+    },
+    "MyRide" : 
+    {
+      "Phone" : "Phone",
+      "Start_Place" : "Start Place",
+      "Estimated_End" : "Estimated End",
+      "Drop_Off" : "Drop Off",
+      "End_Ride" : "End Ride"
+    },
+    "RideInfo" :
+    {
+      "Customer_Name" : "Customer Name",
+      "Phone" : "Phone",
+      "Drivers" : "No Drivers Selected yet. Please go to Drivers on the Driver screen to select your Drivers",
+      "Start_Place" : "Start Place",
+      "Estimated_End" : "Estimated End",
+      "Drop_Off" : "Drop Off",
+      "Ride_Type" : "Ride Type",
+      "Type_Car" : "Type Car",
+      "Amount_Drivers" : "Amount Of Drivers",
+      "Confirmed_Drivers" : "Confirmed Drivers"
     }
   }

@@ -117,7 +117,7 @@ class AvailableRides extends React.Component {
                 style={styles.backgroundImage}>
                 <ScrollView style={styles.ScrollView}>
                     <TouchableHighlight style={styles.MenuButton} onPress={() => this.SaveChanges()}>
-                        <Text style={styles.ButtonText}>Save Changes</Text>
+                        <Text style={styles.ButtonText}>{strings('AvailableRides.Save_Changes')} </Text>
                     </TouchableHighlight>
                     <View>
                         <FlatList
@@ -137,7 +137,7 @@ class AvailableRides extends React.Component {
                                     <View style={styles.NoteColumn}>
 
 
-                                        <Text style={styles.NoteText} >Km Away</Text>
+                                        <Text style={styles.NoteText} >{strings('AvailableRides.Km_Away')}</Text>
                                         <TextInput
                                             style={styles.NoteText}
                                             editable={true}

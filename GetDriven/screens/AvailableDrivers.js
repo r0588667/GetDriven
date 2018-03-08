@@ -80,10 +80,10 @@ class AvailableDrivers extends React.Component {
                 style={styles.backgroundImage}>
                 <ScrollView style={styles.ScrollView}>
                     <TouchableHighlight style={styles.MenuButton} onPress={() => this.SaveChanges()}>
-                        <Text style={styles.ButtonText}>Save Changes</Text>
+                        <Text style={styles.ButtonText}>{strings('AvailableDrivers.Save_Changes')} </Text>
                     </TouchableHighlight>
-                    <Text style={styles.InfoText}>Required Drivers : {this.props.RequiredDrivers}</Text>
-                    <Text style={styles.InfoText}>Selected Drivers : {CheckLength(this.state.Drivers)}</Text>
+                    <Text style={styles.InfoText}>{strings('AvailableDrivers.Required_Drivers')} : {this.props.RequiredDrivers}</Text>
+                    <Text style={styles.InfoText}>{strings('AvailableDrivers.Selected_Drivers')}  : {CheckLength(this.state.Drivers)}</Text>
                     <View>
                         <FlatList
                             data={this.props.drivers}

@@ -11,6 +11,7 @@
     "Password" :"Password",
     "LengthCheck" : "Het Passwoord moet minstens 5 characters lang zijn",
     "CharCheck" : "Het Passwoord moet minstens 1 speciaal karakter hebben",
+    "Show_Optional" : "Duw om de Optionele velden te tonen",
     "Show_Password_Hints" : "Duw Om Passwoord Hints Te Tonen",
     "NumCheck" : "Het Passwoord moet minstens 1 getal hebben"
   },
@@ -31,7 +32,7 @@
     "City" : "Gemeente ",
     "Email" : "Email",
     "Phone_Number" : "Telefoonnummer",
-    "Birth_Date" : "Geboortedatul",
+    "Birth_Date" : "Geboortedatum",
     "SocialSec_Number" : "Rijksregisternummer",
     "Account_Number" : "Rekeningnummer",
     "DateConfirm" : "Bevestig",
@@ -65,13 +66,56 @@
       "TypeOfCar" : "Type Of Car",
       "End_Date" : "Verwachte Eind Datum",
       "End_Time" : "Verwachte Eind Tijd",
-      "Submit" : "Voeg Toe"
+      "Submit" : "Voeg Toe",
+      "Add" : "Add"
     },
     "HomeMenu" :
     {
     "MyRides" : "Mijn Ritten",
     "AvailableRides" : "Vrije Ritten",
     "DriverRegistration" : "Chauffeur Registratie",
-    "CustomerRegistration" : "Klant Registratie"
+    "CustomerRegistration" : "Klant Registratie",
+    "RideRegistration" : "Rit Registratie",
+    "Welcome" : "Welkom",
+    "Message" : "Bedankt om te kiezen voor Get Driven, links in het menu kunt u onder 'Rit Registratie' een rit toevoegen. Eens deze bij 'Mijn Ritten' staat kunt u erop klikken om uw chauffeur(s) te kiezen en te bevestigen.",
+    "Greeting" : "Vriendelijke Groeten"
+    },
+    "AvailableDrivers":
+    {
+      "Required_Drivers" : "Aantal Nodige Bestuurders",
+      "Selected_Drivers" : "Geselecteerde Bestuurders",
+      "Save_Changes" : "Opslaan"
+    },
+    "AvailableRides" :
+    {
+      "Save_Changes" : "Opslaan",
+      "Km_Away" : "Afstand"
+    },
+    "MyRides" :
+    {
+      "Drivers" : "Drivers",
+      "CustomerRides" : "Mijn Ritten als Klant",
+      "DriverRides" : "Mijn Ritten als Bestuurder"
+    },
+    "MyRide" : 
+    {
+      "Phone" : "Telefoon",
+      "Start_Place" : "Start Plaats",
+      "Estimated_End" : "Verwacht Einde",
+      "Drop_Off" : "Afzetplaats",
+      "End_Ride" : "Eindig Rit"
+    },
+    "RideInfo":
+    {
+      "Customer_Name" : "Klant Naam",
+      "Phone" : "Telefoon",
+      "Drivers" : "Nog geen bestuurders geselecteerd",
+      "Start_Place" : "Start Plaats",
+      "Estimated_End" : "Verwacht Einde",
+      "Drop_Off" : "Afzetplaats",
+      "Ride_Type" : "Type Rit",
+      "Type_Car" : "Type Auto",
+      "Amount_Drivers" : "Aantal Bestuurders",
+      "Confirmed_Drivers" : "Bevestigde Bestuurders"
     }
   }

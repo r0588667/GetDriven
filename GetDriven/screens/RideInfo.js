@@ -5,7 +5,7 @@ import { StyleSheet, Text, View,TouchableHighlight,ScrollView,TextInput, ImageBa
 import Meteor, { createContainer, MeteorListView, header } from 'react-native-meteor';
 
 
-class RideInfo extends React.Component
+export default class RideInfo extends React.Component
 {
     static navigationOptions = {
         title: 'Ride Info',
@@ -30,7 +30,7 @@ class RideInfo extends React.Component
             (
                 <View>
                 <View>
-                <Text style={styles.DetailsHeader}>Customer Name</Text>
+                <Text style={styles.DetailsHeader}>{strings('RideInfo.Customer_Name')}</Text>
                 <Text style={styles.DetailsBody}>{Ride[0].userName} {Ride[0].userFirstName}</Text>
                 </View>
                 <View>
@@ -38,7 +38,7 @@ class RideInfo extends React.Component
                 <Text style={styles.DetailsBody}>{Ride[0].userEmail}</Text>
                 </View>
                 <View>
-                <Text style={styles.DetailsHeader}>Phone Number</Text>
+                <Text style={styles.DetailsHeader}>{strings('RideInfo.Phone')}</Text>
                 <Text style={styles.DetailsBody}>{Ride[0].userPhone}</Text>
                 </View>
                 </View>
@@ -49,7 +49,7 @@ class RideInfo extends React.Component
         {
             Drivers =
             (
-                <Text>No Drivers Selected yet. Please go to Drivers on the Driver screen to select your Drivers</Text>
+                <Text>{strings('RideInfo.Drivers')}</Text>
             )
         }
         else
@@ -90,33 +90,33 @@ class RideInfo extends React.Component
                 <Text style={styles.DetailsBody}>{Ride[0]["Date"]} {Ride[0]["Time"]}</Text>
             </View>
             <View>
-                <Text style={styles.DetailsHeader}>Start Place</Text>
+                <Text style={styles.DetailsHeader}>{strings('RideInfo.Start_Place')}</Text>
                 <Text style={styles.DetailsBody}>{Ride[0]["Street"]} {Ride[0]["Nr"]}</Text>
                 <Text style={styles.DetailsBody}>{Ride[0]["Postal_Code"]} {Ride[0]["City"]}</Text>
             </View>
             <View>
-                <Text style={styles.DetailsHeader}>Drop off</Text>
+                <Text style={styles.DetailsHeader}>{strings('RideInfo.Drop_Off')}</Text>
                 {Destination}
             </View>
             {CustomerInfo}
             <View>
-                <Text style={styles.DetailsHeader}>Estimated End</Text>
+                <Text style={styles.DetailsHeader}>{strings('RideInfo.Estimated_End')}</Text>
                 <Text style={styles.DetailsBody}>{Ride[0]["Date"]} {Ride[0]["Time"]}</Text>
             </View>
             <View>
-                <Text style={styles.DetailsHeader}>Ride type</Text>
+                <Text style={styles.DetailsHeader}>{strings('RideInfo.Ride_Type')}</Text>
                 <Text style={styles.DetailsBody}>{Ride[0]["Catagory"]}</Text>
             </View>
             <View>
-                <Text style={styles.DetailsHeader}>Type Car</Text>
+                <Text style={styles.DetailsHeader}>{strings('RideInfo.Type_Car')}</Text>
                 <Text style={styles.DetailsBody}>{Ride[0]["TypeCar"]}</Text>
             </View>
             <View>
-                <Text style={styles.DetailsHeader}>Amount of Drivers</Text>
+                <Text style={styles.DetailsHeader}>{strings('RideInfo.Amount_Drivers')}</Text>
                 <Text style={styles.DetailsBody}>{Ride[0]["RequiredDrivers"]}</Text>
             </View>
             <View>
-                <Text style={styles.DetailsHeader}>Confirmed Drives</Text>
+                <Text style={styles.DetailsHeader}>{strings('RideInfo.Confirmed_Drivers')}</Text>
                 {Drivers}
             </View>
             </ScrollView>
@@ -125,12 +125,3 @@ class RideInfo extends React.Component
 		);
     }
 }
-
-
-export default createContainer(props => {
-    const userid = props["navigation"]["state"]["params"][0].userId;
-    const handle = Meteor.subscribe('allUsers');
-    return {
-        usersReady : handle.ready(),
-    };
-}, RideInfo)

@@ -28,6 +28,13 @@ export default class MyRide extends React.Component {
             vergoeding : 0,
         };
     }
+    /**
+     * Will return a readable TimeStamp.
+     * First gets the accumulated time from the state.
+     * Then for each variable we want to show in the result
+     * (In this case Seconds, Minutes and Hours) it
+     * calculates the total amount and returns it as 1 string.
+    */
     formatAccumulatedTime()
     {
         const timeInMilliseconds = this.state.accumulatedTime;
@@ -54,20 +61,16 @@ export default class MyRide extends React.Component {
 
         return `${hoursString}:${minutesString}:${secondsString}`;
     }
-
-    onReset()
-    {
-        this.onStop();
-        this.setState( { accumulatedTime: 0 } );
-    }
-
+    /**
+     * Checks the state of the timerId property
+     * to see if the timer is running
+     */
     isRunning()
     {
         const result = this.state.timerId;
 
         return result;
     }
-
     onToggleStartStop()
     {
         if ( this.isRunning() )
@@ -79,14 +82,26 @@ export default class MyRide extends React.Component {
             this.onStart();
         }
     }
-
+    /**
+     * Will start the timer
+     * First sets an interval so every 50 milliseconds it will
+     * call the onTick() method
+     * so every 50 millisecond the timerId property will be updated
+     * the time will be collected and set in the state.
+    */
     onStart()
     {
         const timerId = this.setInterval(this.onTick, 50);
         const lastTick = new Date().getTime();
         this.setState({ timerId, lastTick });
     }
-
+    /**
+     * To Stop the Timer from Running
+     * Will first clear the interval so it will not
+     * keep updating every 50 millisecond
+     * It will collect the time so it can save it for
+     * when the timer is restarted.
+    */
     onStop()
     {
         this.clearInterval(this.state.timerId);
@@ -94,6 +109,13 @@ export default class MyRide extends React.Component {
         this.setState(state);
         this.collectTime();
     }
+    /**
+     * Will first collect the currrent time
+     * and then it fetches the property lastTick
+     * which contains the previous time
+     * it will then subtract the 2 to see the elapsed time
+     * and then set the accumulatedTime property to this new value
+    */
     collectTime()
     {
         const now = new Date().getTime();
@@ -132,16 +154,16 @@ export default class MyRide extends React.Component {
         <View>
             <View>
                 <Text style={styles.DetailsHeader}>{this.props.navigation.state.params[0].userName} {this.props.navigation.state.params[0].userFirstName}</Text>
-                <Text style={styles.DetailsBody}>Phone: {this.props.navigation.state.params[0].userPhone}</Text>
+                <Text style={styles.DetailsBody}>{strings('MyRide.Phone')}: {this.props.navigation.state.params[0].userPhone}</Text>
                 <Text style={styles.DetailsBody}>Email: {this.props.navigation.state.params[0].userEmail}</Text>
                 <Text style={styles.DetailsHeader}>Start: </Text>
                 <Text style={styles.DetailsBody}>{this.props.navigation.state.params[0]["Time"]} - {this.props.navigation.state.params[0]["Date"]}</Text>
-                <Text style={styles.DetailsHeader}>Start place: </Text>
+                <Text style={styles.DetailsHeader}>{strings('MyRide.Start_Place')}: </Text>
                 <Text style={styles.DetailsBody}>{this.props.navigation.state.params[0]["Street"]} {this.props.navigation.state.params[0]["Nr"]}</Text>
                 <Text style={styles.DetailsBody}>{this.props.navigation.state.params[0]["Postal_Code"]} {this.props.navigation.state.params[0]["City"]}</Text>
-                <Text style={styles.DetailsHeader}>Estimated End: </Text>
+                <Text style={styles.DetailsHeader}>{strings('MyRide.Estimated_End')}: </Text>
                 <Text style={styles.DetailsBody}>{this.props.navigation.state.params[0]["End_Time"]} - {this.props.navigation.state.params[0]["End_Date"]}</Text>
-                <Text style={styles.DetailsHeader}>Drop off: </Text>
+                <Text style={styles.DetailsHeader}>{strings('MyRide.Drop_Off')}: </Text>
                 {Destination}
             </View>
         </View>
@@ -155,7 +177,7 @@ export default class MyRide extends React.Component {
                   <Text style={styles.ButtonText}> {(this.state.timerId) ? "Stop Timer" : "Start Timer"}</Text>
                 </TouchableHighlight>
                 <TouchableHighlight style={[styles.EndRideButton]} onPress= { () => this.sendEmail()}>
-                  <Text style={styles.ButtonText}>End Ride</Text>
+                  <Text style={styles.ButtonText}>{strings('MyRide.End_Ride')}</Text>
                 </TouchableHighlight>
             </View>
         </View>
@@ -165,6 +187,13 @@ export default class MyRide extends React.Component {
 		);
     }
     
+    /**
+     * Will actually send the mail to the Meteor backend
+     * Will first fill the options value by calling the
+     * calculateCosts function.
+     * After this it will call the Meteor function sendmail.factuur,
+     * which handles sending a mail
+     */
     sendEmail = () => {
         const options = this.calculateCosts()
 
@@ -176,7 +205,11 @@ export default class MyRide extends React.Component {
             }
         });
     }
-    
+    /**
+     * Will Set an Object called options with the info needed
+     * to send the mail and calculates the total cost
+     *
+     */
     calculateCosts = () => {
         const kostenUur = 20.95*(this.state.accumulatedTime/360);
         const vergoeding = this.getDriverVergoeding();
@@ -192,7 +225,11 @@ export default class MyRide extends React.Component {
         return options;
 
     }
-
+    /**
+     * Will fetch all the confirmed Drivers 
+     * and calculate the total distance that the are away from the ride adres
+     * by going through the array with a for loop.
+     */
     getDriverVergoeding = () => {
         let drivers = this.props.navigation.state.params[0]["confirmedDrivers"]
         let sumOfDistance = 0

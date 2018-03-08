@@ -13,7 +13,7 @@ import nl_BE from '../locales/nl_BE.json';
 // Define the supported translations
 I18n.translations = {
   nl_BE,
-  en,
+  en : nl_BE,
 };
 const currentLocale = I18n.currentLocale();
 // Is it a RTL language?

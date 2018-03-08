@@ -146,11 +146,11 @@ export default class HomeMenu extends React.Component {
                             />
                         </View>
                         <View style={styles.BodyText}>
-                            <Text style={styles.alineaText}>Welcome {this.state.First_Name} {this.state.Name},</Text>
+                            <Text style={styles.alineaText}>{strings('HomeMenu.Welcome')} {this.state.First_Name} {this.state.Name},</Text>
                             <Text style={styles.alineaText}/>
-                            <Text style={styles.alineaText}>Bedankt om te kiezen voor Get Driven, links in het menu kunt u onder "Ride registration" een rit toevoegen. Eens deze bij "My rides" staat kunt u erop klikken om uw chauffeur(s) te kiezen en te bevestigen.</Text>
+                            <Text style={styles.alineaText}>{strings('HomeMenu.Message')}</Text>
                             <Text style={styles.alineaText}/>
-                            <Text style={styles.alineaText}>Vriendelijke Groeten</Text>
+                            <Text style={styles.alineaText}>{strings('HomeMenu.Greeting')}</Text>
                             <Text style={styles.alineaText}>Get Driven</Text>
                         </View>
                 </ImageBackground>
